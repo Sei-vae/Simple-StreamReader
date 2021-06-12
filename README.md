@@ -3,20 +3,23 @@
 **Simple Template for future Stream Reader use**
 
 ```
-            FileStream fs = new FileStream(@"temps.csv", FileMode.Open);
+FileStream fs = new FileStream(@"temps.csv", FileMode.Open);
 
-            StreamReader sr = new StreamReader(fs);
+StreamReader sr = new StreamReader(fs);
 
-            while (sr.EndOfStream == false)
-            {
-                txtAusgabe.Text = txtAusgabe.Text + "Zeile " + zeilenNummer + ": " + sr.ReadLine() + Environment.NewLine;
-                zeilenNummer = zeilenNummer + 1;
-            }
+while (sr.EndOfStream == false)
+    {
+    txtAusgabe.Text = txtAusgabe.Text + "Zeile " + zeilenNummer + ": " + sr.ReadLine() + Environment.NewLine;
+    zeilenNummer = zeilenNummer + 1;
+    }
 
-            // It is Important to make resources available after use.
-            sr.Close();
-            fs.Close();
+
+sr.Close();
+fs.Close();
 ```
+
+**It is Important to make resources available after use.**
+**So make sure to Close the FS & SR/SW.**
 
 ## Where you can find more Stuff about me:
 
