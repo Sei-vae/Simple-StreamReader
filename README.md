@@ -1,6 +1,6 @@
 # Simple-StreamReader
 
-**Simple Template for future Stream Reader use**
+**Simple Template for future Stream Reader use:**
 
 ```
 FileStream fs = new FileStream(@"temps.csv", FileMode.Open);
@@ -9,8 +9,8 @@ StreamReader sr = new StreamReader(fs);
 
 while (sr.EndOfStream == false)
     {
-    txtAusgabe.Text = txtAusgabe.Text + "Zeile " + zeilenNummer + ": " + sr.ReadLine() + Environment.NewLine;
-    zeilenNummer = zeilenNummer + 1;
+    Output.Text = Output.Text + "Row " + rowNumber + ": " + sr.ReadLine() + Environment.NewLine;
+    rowNumber = rowNumber + 1;
     }
 
 
@@ -19,6 +19,7 @@ fs.Close();
 ```
 
 **It is Important to make resources available after use.**
+
 **So make sure to Close the FS & SR/SW.**
 
 ## Where you can find more Stuff about me:
